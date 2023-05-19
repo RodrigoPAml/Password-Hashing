@@ -55,13 +55,13 @@ Argon2 is the winner of the Password Hashing Competition held by the Password Ha
 string password = "j&3hc#k$syurh34";
 
 // Hash passwords for test
-string md5 = Md5.HashPassword(password);
+string hash = Md5.HashPassword(password);
  
 // Print hashes
-Console.WriteLine($"MD5: {md5}");
+Console.WriteLine($"MD5: {hash}");
 
 // Verify if its working
-Console.WriteLine($"MD5: {Md5.VerifyPassword(password, md5)}");
+Console.WriteLine($"MD5: {Md5.VerifyPassword(password, hash)}");
 ```
 
 ## Performance and tests results
