@@ -4,6 +4,16 @@
  
  It comes with a basic hashing and benchmark test.
  
+ Algorithms:
+- Md5
+- Sha1
+- Sha256
+- Sha512
+- Pbkdf2
+- BCrypt
+- Scrypt
+- Argon2
+ 
  ## MD5 (Message Digest Algorithm 5)
  MD5 is a widely known hashing algorithm but is considered to be weak for password storage. It produces a 128-bit hash value and is susceptible to various vulnerabilities, such as collision attacks and preimage attacks. It is no longer recommended for secure password storage.
 
@@ -66,7 +76,11 @@ Console.WriteLine($"MD5: {Md5.VerifyPassword(password, hash)}");
 
 ## Performance and tests results
 
-Benchmark sampled each in two seconds.
+Benchmark sampled each in two seconds. 
+
+Check the code to see parameters used for each method because result may change drastically
+
+See output:
 
 ```
 Testing algorithms
