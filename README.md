@@ -1,10 +1,29 @@
 # Password Hashing Methods
 
- Repository to provide hashing algorithms in C# easily.
+ Repository to provide hashing algorithms in C# easily, focused in the context of password hashing.
+
+ It comes with a basic hashing class and benchmark tests.
+
+## Reasons for Using Hashing Algorithms
+
+1. **Data Integrity**: Hashing ensures that data has not been altered or tampered with by generating a unique hash value for the original data. Any modification to the data results in a different hash, allowing verification of integrity.
+
+2. **Efficient Data Retrieval**: Hashing is used in data structures like hash tables to enable fast data lookups. By hashing keys, these structures can quickly retrieve corresponding values.
+
+3. **Password Storage**: Instead of storing passwords in plain text, systems hash passwords before storing them. Even if a database is compromised, the original passwords remain secure due to the difficulty of reversing the hash.
+
+4. **Digital Signatures and Certificates**: Hashing is integral to creating digital signatures, which verify the authenticity and integrity of messages or documents in encryption systems.
+
+5. **Checksum and Error Detection**: Hashes are used in checksums to verify that files or messages have been transmitted without errors. If the computed hash on the receiving end matches the original hash, the data is considered error-free.
+
+6. **Cryptographic Applications**: Cryptographic hashing algorithms are used in blockchain technologies, securing transactions, and creating links between blocks of data.
+
+7. **Data Deduplication**: Hashes are used to identify duplicate data by comparing hash values, helping in reducing storage space by storing only unique data.
+
+8. **Content Addressing**: Hashing is used to generate unique identifiers for pieces of content (like files or documents) in distributed systems, ensuring that each piece of content can be referenced and retrieved accurately.
  
- It comes with a basic hashing and benchmark test.
+ ## Algorithms
  
- Algorithms:
 - Md5
 - Sha1
 - Sha256
