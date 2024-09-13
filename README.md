@@ -2,7 +2,7 @@
 
  Repository to provide hashing algorithms in C# easily, focused in the context of password hashing.
 
- It comes with a basic hashing class and benchmark tests.
+ It comes with a basic hashing classes and benchmark tests.
 
 ## Reasons for Using Hashing Algorithms
 
