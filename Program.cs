@@ -8,17 +8,17 @@ namespace Hashers
         {
             Console.WriteLine("Testing algorithms\n");
 
-            string password = "j&3hc#k$syurh34";
+            var password = "j&3hc#k$syurh34";
 
             // Hash passwords for test
-            string md5 = Md5.HashPassword(password);
-            string sha1 = Sha1.HashPassword(password);
-            string sha256 = Sha256.HashPassword(password);
-            string sha512 = Sha512.HashPassword(password);
-            string pbkdf2 = Pbkdf2.HashPassword(password);
-            string bcrypt = BCrypt.HashPassword(password);
-            string scrypt = Scrypt.HashPassword(password);
-            string argon2 = Argon2.HashPassword(password);
+            var md5 = Md5.HashPassword(password);
+            var sha1 = Sha1.HashPassword(password);
+            var sha256 = Sha256.HashPassword(password);
+            var sha512 = Sha512.HashPassword(password);
+            var pbkdf2 = Pbkdf2.HashPassword(password);
+            var bcrypt = BCrypt.HashPassword(password);
+            var scrypt = Scrypt.HashPassword(password);
+            var argon2 = Argon2.HashPassword(password);
 
             // Print hashes
             Console.WriteLine($"MD5: {md5}");
@@ -56,9 +56,9 @@ namespace Hashers
 
         static void PrintBenchmarks(Action hashMethod, string methodName, int sampleTime = 2_000)
         {
-            long hashes = 0;
+            var hashes = 0;
 
-            Stopwatch stopwatch = new Stopwatch();
+            var stopwatch = new Stopwatch();
             stopwatch.Start();
 
             while(stopwatch.ElapsedMilliseconds < sampleTime)

@@ -44,7 +44,7 @@ namespace Hashers
             int memorySize = 1_048_576)
         {
             // Convert the hashed password from base64 to byte array
-            byte[] bytes = Convert.FromBase64String(hashedPassword);
+            var bytes = Convert.FromBase64String(hashedPassword);
 
             // Hash the provided password using the extracted salt
             var hasher = new Argon2id(Encoding.Unicode.GetBytes(password))
@@ -56,7 +56,7 @@ namespace Hashers
             };
 
             // Compare hashes withou salts
-            byte[] hash = hasher.GetBytes(bytes.Length-saltSize);
+            var hash = hasher.GetBytes(bytes.Length-saltSize);
             return bytes.Skip(saltSize).SequenceEqual(hash);
         }
     }

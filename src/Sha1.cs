@@ -10,7 +10,7 @@ namespace Hashers
         /// </summary>
         public static string HashPassword(string password)
         {
-            using (SHA1 sha1 = SHA1.Create())
+            using (var sha1 = SHA1.Create())
             {
                 var encodedBytes = Encoding.Unicode.GetBytes(password);
                 var bytes = sha1.ComputeHash(encodedBytes);

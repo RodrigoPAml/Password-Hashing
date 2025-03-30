@@ -10,7 +10,7 @@ namespace Hashers
         /// </summary>
         public static string HashPassword(string password)
         {
-            using (MD5 md5 = MD5.Create())
+            using (var md5 = MD5.Create())
             {
                 var bytes = Encoding.Unicode.GetBytes(password);
                 var md5Bytes = md5.ComputeHash(bytes);

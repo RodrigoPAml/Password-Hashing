@@ -9,7 +9,7 @@ namespace Hashers
         /// </summary>
         public static string HashPassword(string password, int iterations = 16384, int blockSize = 8, int threadCount = 4)
         {
-            ScryptEncoder encoder = new ScryptEncoder(iterations, blockSize, threadCount);
+            var encoder = new ScryptEncoder(iterations, blockSize, threadCount);
             return encoder.Encode(password);
         }
 
@@ -18,7 +18,7 @@ namespace Hashers
         /// </summary>
         public static bool VerifyPassword(string password, string hashedPassowrd, int iterations = 16384, int blockSize = 8, int threadCount = 1)
         {
-            ScryptEncoder encoder = new ScryptEncoder(iterations, blockSize, threadCount);
+            var encoder = new ScryptEncoder(iterations, blockSize, threadCount);
             return encoder.Compare(password, hashedPassowrd);
         }
     }
